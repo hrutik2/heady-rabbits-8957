@@ -14,5 +14,24 @@ using their Naira account by offering a convenient payment option.
 
 <img width="851" alt="image" src="https://github.com/hrutik2/heady-rabbits-8957/assets/115460366/8fc1b359-b42e-4ae0-91e4-caadecb5b8aa">
 
+<br>
 
-![Mock Image](img/mockImg.png)
+## Features
+
+<ul>
+<li>Lorem</li>
+<li>Lorem</li>
+<li>Lorem</li>
+<li>Lorem</li>
+</ul>
+
+## Technologies Used
+
+<ul>
+<li>Lorem</li>
+<li>Lorem</li>
+<li>Lorem</li>
+<li>Lorem</li>
+</ul>
+
+## Screenshots
