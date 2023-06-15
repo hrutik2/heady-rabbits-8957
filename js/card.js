@@ -21,5 +21,4 @@ let cardno=document.createElement("td");
 cardno.innerHTML=ele.cardno;
 tr.append(id,name,address,cardno);
 return tr;
-     }
-}
+
