@@ -19,7 +19,17 @@ let address=document.createElement("td");
 address.innerHTML=ele.address;
 let cardno=document.createElement("td");
 cardno.innerHTML=ele.cardno;
-tr.append(id,name,address,cardno);
+let edittd=document.createElement("td");
+let edit=document.createElement("button");
+edittd.setAttribute("class","editbtn");
+edit.innerHTML="Edit";
+edittd.append(edit);
+let deletetd=document.createElement("td");
+let deleteb=document.createElement("button");
+deletetd.setAttribute("class","deletebtn");
+deleteb.innerHTML="Delete";
+deletetd.append(deleteb);
+tr.append(id,name,address,cardno,edittd,deletetd);
 return tr;
      }
 }

@@ -21,20 +21,29 @@
             <li>home</li>
             <li>profile</li>
         </ul>
+    </div>
+    <div id="search"><select name="" id="select">
+        <option value="">select</option>
+        <option value="name">Name</option>
+        <option value="address">Adress</option>
+    </select><input type="search" name="" id="search">
+    <button>Search</button>
     </div>  
-    <div id="card">
         <table>
         <thead>
             <tr id="header">
                 <th>id</th>
                 <th>name</th>
-                <th>adress</th>
+                <th>adress <select class="table-filter">
+                    <option value="all"></option>
+                </select></th>
                 <th>cardno</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody></tbody> 
     </table>
-    </div>
 </body>
 </html>
 <script src="./js/cardDetail.js"></script>

@@ -81,11 +81,26 @@ th,td{
     font-size: 20px;
 }
 tbody tr:hover{
-    background-color: #f5f5f5;
     transform: scale(1.15);
-   background-color: rgb(132, 132, 134);
+   background-color: rgb(166, 166, 171);
 color: rgb(16, 17, 18);
 font-weight: bold;
 box-shadow: 2px 2px 12px rgba(10, 3, 32, 0.906),-1px,-1px 8px rgba(0,0,0,0);
-
+border: 1px solid black;
+}
+button{
+    height: 100%;
+    width: 100%;
+}
+.editbtn>button{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(3, 41, 3);
+    color: aliceblue;
+}
+.deletebtn>button{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(71, 2, 2);
+    color: aliceblue;
 }
