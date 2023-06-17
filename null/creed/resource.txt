@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+favicon : https://cred.club/assets/icons/logo.png
+logo : https://web-images.credcdn.in/_next/assets/images/home-page/cred-logo.png
+
+# Section 2 - Phone
+https://web-images.credcdn.in/_next/assets/images/home-page/phone/neopop-left-2.png
+https://web-images.credcdn.in/_next/assets/images/home-page/phone/neopop-left-1.png
+https://web-images.credcdn.in/_next/assets/images/home-page/phone/neopop-center.png
+https://web-images.credcdn.in/_next/assets/images/home-page/phone/neopop-right-1.png
+https://web-images.credcdn.in/_next/assets/images/home-page/phone/neopop-right-2.png
+
+# Section 3 - 
+backgroundImage: https://web-images.credcdn.in/_next/assets/images/home-page/deserve-more-bg.jpg
+
+# Section 4 -
+https://web-images.credcdn.in/_next/assets/images/home-page/features/neopop-fold1.png;
+https://web-images.credcdn.in/_next/assets/images/home-page/features/neopop-fold2.png;
+https://web-images.credcdn.in/_next/assets/images/home-page/features/neopop-fold3.png;
+https://web-images.credcdn.in/_next/assets/images/home-page/features/neopop-fold4.png;
+
+# Section 5 -
+background : https://web-images.credcdn.in/_next/assets/images/home-page/neopop-image-mock.png
