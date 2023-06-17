@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in and  Registration</title>
-    <link rel="stylesheet" href="./css/login.css">
-    
+    <link rel="stylesheet" href="./css/apply.css">
 
 </head>
 <body>
@@ -16,7 +15,7 @@
              <a href="">About</a>
              <a href="">Services</a>
              <a href="">Contact</a>
-            <button class="btnlogin-popup">Login</button>
+            <button class="btnlogin-popup">Apply</button>
         </nav>
       
     </header>
@@ -55,32 +54,61 @@
         <h2>Register</h2>
         <form action="#">
             <div class="input-box">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="email" required>
-                <label>Email</label>
+                <span class="icon" id="name">
+                    <ion-icon name="person"></ion-icon></span>
+                 
+                 <input type="string" required>
+                  <label>Username</label>
             </div>
             <div class="input-box">
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                <input type="password" required>
+                <span class="icon" id="email"><ion-icon name="mail"></ion-icon></span>
+                <input type="string" required>
+                <label>Email</label>
+            </div>
+            
+          
+            <div class="input-box">
+                <span class="icon" id="password"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="string" required>
                 <label>Password</label>
             </div>
+            
+            <div class="input-box">
+                <span class="icon" id="aadha"></span>
+                <input type="string" required>
+                <label>aadhar</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"  id="add"><ion-icon name="location"></ion-icon></span>
+                <input type="string" required>
+                <label>Address</label>
+            </div>
+            <div class="input-box">
+                <span class="icon" id="mo"><ion-icon name="phone-portrait"></ion-icon></span>
+                <input type="string" required>
+                <label>Mobile No.</label>
+            </div>
+            
+            
+
         <div class="remember-forgot">
+
             <label><input type="checkbox">
-            Remember me</label>
+            agree to the terms & conditions</label>
             <a href="#">forgot Pasword?</a>
         </div>
-        <button type="submit" class="btn">Login
+        <button type="submit" class="btn" id="registrbtn">Register
 
-        </button>
+        </button> 
         <div class="login-register">
-            <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+            <p>Already have an account<a href="#" class="login-link">Login</a></p>
         </div>
         </form>
     </div> 
        
 </div>
-<script src="./js/login.js"></script>
 
+<script src="./js/apply.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
