@@ -34,8 +34,9 @@ address.innerHTML=ele.address;
 let mobileno=document.createElement("td");
 mobileno.innerHTML=ele.mobileno;
 let cardno=document.createElement("td");
-let random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-cardno.innerHTML=random(1111111111111111,9999999999999999);
+// let random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+// cardno.innerHTML=random(1111111111111111,9999999999999999);
+cardno.innerHTML=ele.cardno;
 let edittd=document.createElement("td");
 let edit=document.createElement("button");
 edittd.setAttribute("class","editbtn");
@@ -96,6 +97,7 @@ function adduser(){
          }).then(function(res){
        return res.json();
          }).then(function(list){
+          alert("User Deleted");
            fetchdata(dataurl);
          }).catch(function(err){
            console.log(err);
@@ -133,17 +135,18 @@ function adduser(){
            'Content-type':'application/json'
          },
           body:JSON.stringify({
-               username:updatename.value,
+                username:updatename.value,
                 email:updateemail.value,
-                password:updatepassword.value, 
+                password:updatepassword.value,
                 aadhar:updateaadhar.value,
-                address:updateaddress.value, 
-                mobileno:updatemobile.value, 
+                address:updateaddress.value,
+                mobileno:updatemobile.value,
                 cardno:updatecard.value,
           })
          }).then(function(res){
        return res.json();
          }).then(function(list){
+          alert("Data Updated");
            fetchdata(dataurl);
          }).catch(function(err){
            console.log(err);
