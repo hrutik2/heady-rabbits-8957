@@ -5,10 +5,6 @@
     box-sizing: border-box;
     font-family:'Poppins',sans-serif;
 }
-body{
-    margin: 0px;
-    padding: 0px;
-}
 #navupdiv{
     width: 100%;
 }
@@ -248,3 +244,4 @@ padding-left: 75px;
 padding-top: 9px;
 font-size: 13px;
 }
+
