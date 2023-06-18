@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/cardDetail.css">
+</head>
+<body>
+    <div class="up",id="navupdiv">
+    <div class="up" id="navup">
+    <div id="logo">logo</div>
+    <p> Card Details </p>
+    </div>
+</div>
+    <div class="up" id="navdown">
+    <div id="navsymbol"><i class="fa fa-arrow-left"></i>
+    </div>
+    <ul>
+            <li>home</li>
+            <li>profile</li>
+        </ul>
+    </div>
+    <div id="search"><select name="" id="select">
+        <option value="">select</option>
+        <option value="name">Name</option>
+        <option value="address">Adress</option>
+    </select><input type="search" name="" id="search">
+    <button>Search</button>
+    </div>  
+        <table>
+        <thead>
+            <tr id="header">
+                <th>id</th>
+                <th>name</th>
+                <th>adress <select class="table-filter">
+                    <option value="all"></option>
+                </select></th>
+                <th>cardno</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody> 
+    </table>
+</body>
+</html>
+<script src="./js/cardDetail.js"></script>
