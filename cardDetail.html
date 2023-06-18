@@ -22,21 +22,51 @@
             <li>profile</li>
         </ul>
     </div>
-    <div id="search"><select name="" id="select">
+    <!-- <div id="search"><select name="" id="select">
         <option value="">select</option>
         <option value="name">Name</option>
         <option value="address">Adress</option>
     </select><input type="search" name="" id="search">
     <button>Search</button>
-    </div>  
+    </div>   -->
+    <div class="container">
+    <div class="section1">
+        <div class="box">
+        <h4>Add User</h4>
+        <input type="text" id="newusername">
+        <input type="text" id="newuseremail">
+        <input type="text" id="newuserpassword">
+        <input type="text" id="newuseraadhar">
+        <input type="text" id="newuseradress">
+        <input type="text" id="newusermobileno">
+        <input type="text" id="newusercardno"><br>
+        <button id="adduser" class="secbtn">Add User</button>
+</div>
+<div class="box">
+        <h4>Update User</h4>
+        <input type="text" id="updateid">
+        <input type="text" id="updateusername">
+        <input type="text" id="updateuseremail">
+        <input type="text" id="updateuserpassword">
+        <input type="text" id="updateuseraadhar">
+        <input type="text" id="updateuseradress">
+        <input type="text" id="updateusermobileno">
+        <input type="text" id="updateusercardno"><br>
+        <button id="userupdate" class="secbtn">Update User</button>
+        </div>
+<!-- sortfunction -->
+   </div>
+    <div class="section2">
         <table>
         <thead>
             <tr id="header">
                 <th>id</th>
                 <th>name</th>
-                <th>adress <select class="table-filter">
-                    <option value="all"></option>
-                </select></th>
+                <th>email</th>
+                <th>password</th>
+                <th>aadhar</th>
+                <th>address</th>
+                <th>mobileno</th>
                 <th>cardno</th>
                 <th>Edit</th>
                 <th>Delete</th>
@@ -44,6 +74,8 @@
         </thead>
         <tbody></tbody> 
     </table>
+    </div>
+    </div>
 </body>
 </html>
 <script src="./js/cardDetail.js"></script>
