@@ -61,9 +61,6 @@ async function fetchdata(employeeURL){
 
     let newUser= {
       
-       
-        
-      
         aadhar:aadhar.value,
         address:add.value,
         email:email.value,
@@ -73,8 +70,6 @@ async function fetchdata(employeeURL){
     };
   
     
-     
-
 
   fetch('https://648d87622de8d0ea11e7f250.mockapi.io/PayWisee', {
     method: 'POST',
