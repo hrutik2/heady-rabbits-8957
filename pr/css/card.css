@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+#navupdiv{
+    width: 100%;
+}
+.up{
+    background-color: rgb(3, 3, 39);
+}
+#navup{
+    width: 60%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+#logo{
+height: 100%;
+width: 20%;
+/* border: 2px solid white; */
+}
+#sinm{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+#navup #little1{
+color: aliceblue;
+font-size: 30px;
+margin-top: 5px;
+}
+#navup #little{
+    font-size:20px;
+    margin-top: -10px;
+    color: aliceblue;
+}
+#navdown{
+    width: 100%;
+    height: 60px;
+    margin-top: -2px;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navdown ul{
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    height: 100%;
+    color: aliceblue;
+    list-style: none;
+    align-items: center;
+    font-size: 20px;
+}
+i{
+    color: aliceblue;
+  margin-top: 17px;
+}
+#navsymbol{
+    align-items: center;
+    width: 5%;
+    height: 80%;
+    margin-left: 2%;
+    font-size: 20px;
+}
+body{
+overflow: hidden;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     min-height:100vh;
+    background-color: rgb(3, 3, 39); 
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: -45%;
+    left: 50%;
+    width: 580px;
+    height: 580px;
+    background: linear-gradient(skyblue,rgb(41, 139, 178),red,rgb(169, 54, 54),rgb(199, 86, 105));
+    border-radius: 50%;
+}
+.card{
+    position: relative;
+    width: 450px;
+    height:260px;
+    transform-style: preserve-3d;
+    perspective: 400px;
+    margin-top: -10%;
+}
+.card .face{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 35px #00000080;
+    border-radius: 15px;
+    background: #ffffff08;
+    backdrop-filter: blur(15px);
+    transform-style: preserve-3d;
+    transition: 1s;
+    backface-visibility:hidden;
+}
+.chip{
+    height:50px;
+    width: 50px;
+}
+.card:hover .face.front{
+    transform: rotateY(180deg);
+}
+.card .face.back{
+    transform:rotateY(180deg);
+}
+.card:hover .face.back{
+    transform:rotateY(360deg); 
+}
+.card .face.front::before{
+    content: '';
+    position:absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+.card .face.front::after{
+    content: '';
+    position:absolute;
+    bottom: 40px;
+    right: 80px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+.card .face.front .debit{
+    position:absolute;
+    left: 40px;
+    top: 30px;
+    color: #fff;
+    font-weight: 500;
+}
+.card .face.front .bank{
+    position: absolute;
+    right: 40px;
+    top: 25px;
+    color: #fff;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+}
+.card .face.front .number{
+    position:absolute;
+    bottom: 130px;
+    left: 40px;
+    color: #fff;
+    font-weight:500;
+    letter-spacing: 6px;
+    font-size: 18px;
+    text-shadow: 0 2px 1px #0005;
+    font-family:cursive,sans-serif;
+}
+.card .face.front .chip{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    max-width: 64px;
+}
+.card .face.front .cardholder{
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.card .face.back .blackbar{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 50px;
+    background: #000;
+}
+.card .face.back .ccvtext{
+position: absolute;
+top: 120px;
+left: 30px;
+
+}
+.card .face.back .ccvtext h5{
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.card .face.back .ccvtext .whitebar{
+    position: relative;
+    width: 350px;
+    height: 40px;
+    background: #fff;
+    margin-top: 5px;
+}
+.card .face.back .ccvtext .ccv{
+    position: relative;
+    top: -35px;
+    left: 340px;
+    background-color: #ccc;
+    color: #111;
+    width: 50px;
+    height: 30px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .face.back .text{
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1.4em;
+    font-weight: 300;
+}
+ .top{
+color: #fff;
+padding-left: 75px;
+padding-top: 9px;
+font-size: 13px;
+}

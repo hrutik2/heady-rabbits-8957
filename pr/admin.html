@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paywise</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #data {
+        display: flex;
+    }
+
+    #left {
+        width: 20%;
+        height: 110vh;
+        background-color: rgb(19, 198, 229);
+    }
+
+    #name,
+    #list {
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    #name>h2 {
+        font-size: 25px;
+        text-align: center;
+        color: white;
+    }
+
+    #a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #rigth {
+        width: 85%;
+        margin-left: 10px;
+    }
+
+    #navbar {
+        padding: 10px;
+        display: flex;
+        background-color: rgb(237, 231, 231);
+        justify-content: space-between;
+    }
+
+    #Name {
+        margin-left: 20px;
+    }
+
+    #admin {
+        margin-top: 7px;
+        margin-right: 20px;
+    }
+
+    .search-box {
+        margin-top: 7px;
+        width: 300px;
+    }
+
+    .search-box select {
+        width: 100%;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="data">
+        <div id="left">
+            <div id="name" style="width: 100%;">
+                <a href="/index.html"><img src="/images/logo.png" alt="" style="width: 100%;"></a>
+            </div>
+            <div id="list">
+                <div>
+                    <div style="margin-top: 10px;"><a href="/admin.html" id="a"><h2>Dashboard</h2></a></div>
+                    <div style="margin-top: 10px;"><a href="/admincurrency .html" id="a"><h2>currency Exchange</h2></a></div>
+                    <div style="margin-top: 20px;"><a href="/adminuser.html" id="a"><h2>Users</h2></a></div>
+                </div>
+            </div>
+        </div>
+        <div id="rigth">
+            <div id="navbar">
+                <div id="Name">
+                    <h1>Dashboard</h1>
+                </div>
+                <div>
+                    <select name="" id="select">
+                        <option value="NGN">Nigerian Naira</option>
+                        <option value="USD">United States Dollar </option>
+                        <option value="INR">Indian Rupee</option>
+                        <option value="AED">United Arab Emirates Dirham</option>
+                        <option value="JPY">Japanese Yen</option>
+                        <option value="ALL">Albanian Lek</option>
+                        <option value="AMD">Armenian Dram</option>
+                        <option value="EUR">European Union countries </option>
+                        <option value="CHF">Swiss Franc</option>
+                        <option value="RUB">Russian Ruble</option>
+                    </select>
+                </div>
+                <div id="admin">
+                    <h3>Admin</h3>
+                </div>
+                
+            </div>
+            <div>
+                <h1>Graph for currency Exchange Rate</h1>
+                
+
+                <div id="c" style="width: 80%; height: 100vh;margin: auto;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const apiUrl = 'https://64889f370e2469c038fe1ba1.mockapi.io/users';
+       let data=document.getElementById("select")
+       data.addEventListener("change",()=>{
+        let a=data.value
+        fetchGraphData(a)
+       })
+       fetchGraphData("USD")
+        function fetchGraphData(a) {
+            fetch(`${apiUrl}/${a}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    const currencyLabels = Object.keys(data.conversion_rates);
+                    const exchangeRates = Object.values(data.conversion_rates);
+                    createGraph(currencyLabels, exchangeRates);
+                })
+                .catch(error => console.log("Error:", error));
+        }
+
+        function createGraph(currencyLabels, exchangeRates) {
+            let c = document.getElementById('c');
+            c.innerHTML=""
+            let canvas = document.createElement("canvas");
+            let ctx = canvas.getContext("2d");
+            c.appendChild(canvas);
+             
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: currencyLabels,
+                    datasets: [{
+                        label: 'Exchange Rates',
+                        data: exchangeRates,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        fetchGraphData();
+    </script>
+</body>
+
+</html>

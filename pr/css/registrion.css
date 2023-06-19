@@ -1,0 +1,127 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://img.freepik.com/premium-vector/global-currency-background_115579-405.jpg?w=1900");
+    background-position: inherit;
+}
+
+#body{
+   width: 30%;
+   margin: auto;
+   text-align: center;
+}
+
+#logo{
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#inputs{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#inputs>div,
+#bt{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#Name,
+#Email,
+#password,
+#address,
+#mobileno,
+#addhar{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#bt div{
+    width: 30%;
+    margin: auto;
+}
+
+#button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(69, 107, 220);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    #body {
+        width: 80%;
+    }
+    
+    #logo {
+        width: 60%;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    
+    #inputs>div,
+    #bt {
+        width: 100%;
+    }
+    
+    #Name,
+    #Email,
+    #password,
+    #address,
+    #mobileno,
+    #addhar {
+        width: 100%;
+    }
+    
+    #bt div {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #body {
+        width: 100%;
+    }
+    
+    #logo {
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    
+    #inputs>div,
+    #bt {
+        width: 100%;
+    }
+    
+    #Name,
+    #Email,
+    #password,
+    #address,
+    #mobileno,
+    #addhar {
+        width: 100%;
+    }
+    
+    #bt div {
+        width: 50%;
+    }
+}

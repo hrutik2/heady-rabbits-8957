@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/css/admin.css">
+<body>
+    <div id="data">
+    <div id="left">
+
+        <div id="name" style="width: 100%;">
+            <a href="/index.html"><img src="/images/logo.png" alt="" style="width: 100%;"></a>
+        </div>
+
+        <div id="list">
+               <div>
+                <div style="margin-top: 10px;"><a href="/admin.html" id="a"><h2>Dashboard</h2></a></div>
+                <div style="margin-top: 10px;"><a href="/admincurrency .html" id="a"><h2>currency Exchange</h2></a></div>
+                <div style="margin-top: 20px;"><a href="/adminuser.html" id="a"><h2>Users</h2></a></div>
+               </div>
+           
+         
+        </div>
+    </div>
+    <div id="rigth">
+        <div id="navbar">
+            <div id="Name"> 
+                <h1>currency Exchange</h1>
+            </div>
+            <div class="search-box">
+                <select name="from currency" id="fromCurrency">
+                    
+                </select>
+              </div>
+            <div id="admin">
+                <h3>Admin</h3>
+            </div>
+        </div>
+        <div>
+
+  
+  <h1>Currency Exchange Admin</h1>
+  <div id="addcurr"><button id ="bt"><h3>ADD Currency</h3></button></div>
+  
+  <div id="addcurrency">
+   
+    <div>
+        conutry name 
+    <input type="text" placeholder="conutry name" id="co">
+</div>
+<div>
+    conutry currency 
+<input type="text" placeholder="conutry currency" id="co1">
+<span id="close">add</span>
+</div>
+  
+
+
+
+  </div>
+
+  <table>
+    <thead></thead>
+    <tr>
+      <th>Currency</th>
+      <th>Exchange Rate</th>
+      <th>Last Updated</th>
+     <th>Delete</th>
+    
+    </tr>
+   </thead>
+    <tbody id="container">
+     
+    </tbody>
+   
+  </table>
+    
+
+
+        </div>
+</body>
+<script src="/javascript/admin.js"></script>
+</html>

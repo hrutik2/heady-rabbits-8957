@@ -1,0 +1,9 @@
+let data1=JSON.parse(localStorage.getItem("u"))||[]
+let userhead=document.getElementById("userhead")
+userhead.innerText=data1.username
+let Cardno=document.getElementById("number")
+Cardno.innerText=data1.cardno
+let cardholderName=document.getElementById("cardholder")
+cardholderName.innerText=data1.username
+let cvc=document.getElementById("ccv")
+cvc.innerText=data1.cvc
