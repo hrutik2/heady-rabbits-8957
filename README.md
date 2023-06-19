@@ -35,7 +35,7 @@ using their Naira account by offering a convenient payment option.
 
 ## Screenshots
 <ul>
-    <li><img src="src/1.png" alt=""></li>
+    <li><img src="[src/1.png](https://drive.google.com/drive/folders/1vPyN24t-DgsmX9mTNFu9uXDYIGqpEpDn)" alt=""></li>
     <li><img src="src/2.png" alt=""></li>
     <li><img src="src/3.png" alt=""></li>
     <li><img src="src/ApplyNow.png" alt=""></li>
