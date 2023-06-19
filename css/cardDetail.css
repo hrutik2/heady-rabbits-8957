@@ -60,39 +60,65 @@ i{
     width: 100%;
     justify-content: space-around;
     gap: 10px;
+    flex-direction: row;
 }
 .section1{
     width: 20%;
-    margin-left: 10px;
+    margin-left: 2px;
     margin-top: 30px;
    text-align: center;
 }
 .section2{
     width: 80%;
     /* background-color: red; */
-    margin-top: 30px;
+    margin-left: 10px;
+    margin-top: 70px;
     position: relative;
 }
 .box{
     width: 100%;
     text-align: center;
     border: 1px solid rgb(154, 152, 152);
-    margin-bottom: 20px;
+    margin-bottom: 29px;
+    background-color: rgb(3, 3, 46);
+    border-radius: 15px;
 }
 .box input{
-    height: 20px;
+    height: 25px;
     margin-bottom: 10px;
     width: 80%;
     outline: none;
+    background-color: rgb(107, 131, 59);
+    border: 3px solid greenyellow;
+    border-radius: 10px;
+    color: rgb(1, 1, 38);
+    font-weight: bold;
+}
+.box input:focus{
+    background-color: rgb(6, 247, 247);
+    border: 3px solid yellow;
 }
 .box h4{
     font-size: 25px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(248, 248, 250);
 }
 .box button{
     margin-top: 10px;
     margin-bottom: 20px;
+    height: 30px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: rgb(6, 247, 247);
+    border: 3px solid rgb(15, 116, 156);
+    color:rgb(3, 3, 48);
+    font-weight: bold;
+}
+.box button:hover{
+    background-color: rgb(6, 247, 247);
+    color:rgb(201, 13, 45);;
+    border:3px solid rgb(201, 13, 45);
 }
 
  table{
@@ -129,19 +155,16 @@ font-weight: bold;
 box-shadow: 2px 2px 12px rgba(10, 3, 32, 0.906),-1px,-1px 8px rgba(0,0,0,0);
 border: 1px solid black;
 }
-/* button{ */
-    /* height: 10px;
-    width: 100%; */
-/* } */
 .editbtn>button{
-    /* height: 100%;
-    width: 100%; */
     background-color: rgb(3, 41, 3);
     color: aliceblue;
 }
 .deletebtn>button{
-    /* height: 100%;
-    width: 100%; */
     background-color: rgb(71, 2, 2);
     color: aliceblue;
 }
+
+
+
+
+

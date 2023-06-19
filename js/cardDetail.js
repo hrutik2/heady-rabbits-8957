@@ -1,11 +1,14 @@
 let dataurl=`https://648d87622de8d0ea11e7f250.mockapi.io/PayWisee`;
 
+let arr=[];
+
 fetchdata(dataurl);
 function fetchdata(data){
 let fetched=fetch(data).then(function(res){
      return res.json();
 }).then(function(list){
      display(list);
+     arr=list;
 }).catch(function(err){
      console.log(err);
 });
@@ -157,3 +160,45 @@ adduserbtn.addEventListener("click",adduser);
     })
    })
 
+
+ let namebtn=document.getElementById("sortname");
+let emailbtn=document.getElementById("sortemail");
+let aadharbtn=document.getElementById("sortadhar");
+let addressbtn=document.getElementById("sortaddress");
+let cardbtn=document.getElementById("cardno");
+
+
+ cardbtn.addEventListener("click",function(){
+let filtered=arr.sort(function(a,b){
+  return Number(a.cardno)-Number(b.cardno);
+})
+  display(filtered);
+ });
+
+ aadharbtn.addEventListener("click",function(){
+  let filtered1=arr.sort(function(a,b){
+    return Number(a.aadhar)-Number(b.aadhar);
+  })
+    display(filtered1);
+   });
+
+   namebtn.addEventListener("click",function(){
+    let filtered2=arr.sort(function(a,b){
+      return ((a.username).trim()).charCodeAt()-((b.username).trim()).charCodeAt();
+    })
+      display(filtered2);
+     });
+
+     emailbtn.addEventListener("click",function(){
+      let filtered3=arr.sort(function(a,b){
+        return ((a.email).trim()).charCodeAt()-((b.email).trim()).charCodeAt();
+      })
+        display(filtered3);
+       });
+
+       addressbtn.addEventListener("click",function(){
+        let filtered4=arr.sort(function(a,b){
+          return ((a.address).trim()).charCodeAt()-((b.address).trim()).charCodeAt();
+        })
+          display(filtered4);
+         });
