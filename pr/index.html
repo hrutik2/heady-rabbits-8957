@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<style>
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    a{
+        border-radius: 20px;
+        text-decoration: none;
+    }
+    .details{
+   
+        display: flex;
+        flex-direction: column
+        
+    }
+    .detailS img{
+        width: 20%;
+        
+    }
+    .appBenifits{
+        display: flex;
+        justify-content: center;
+    }
+    .footerData{
+        width: 20%;
+        padding: 5px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .footerData1{
+        width: 20%;
+        padding: 5px;
+        justify-content: space-evenly;
+    }
+    .nav_logo-button{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .nav_logo-button button{
+        margin: auto;
+        width: 100px;
+        height: 50px;
+        border: none;
+        border-radius: 20px;
+        
+        
+    }
+    .heading {
+    font-family: 'Pacifico', cursive;
+    margin: 35px auto 20px;
+}
+ 
+hr {
+    border-top: 2px solid black;
+    width: 40%;
+    margin-bottom: 55px;
+}
+
+
+  span {
+    font-weight: bold;
+  }
+
+  input[type="number"] {
+    padding: 10px;
+    width: 67%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  select {
+    padding: 10px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
+  button {
+    width: 45%;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  #container {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  #rate{
+    width:50%;
+    margin: auto;
+    padding: 30px;
+    padding-left: 80px;
+   
+  }
+  #a{
+    width:50%;
+    margin: auto;
+    padding: 30px;
+    padding-left: 80px;
+    
+  }
+  #bt{
+    width: 15%;
+    
+    margin: auto;
+    margin-top: 20PX;
+  }
+  #amount{
+   width: 30%;
+   margin: auto;
+ 
+   text-align: center;
+   display:none;
+  
+  }
+  #resetButton {
+      width: 45%;
+      padding: 10px 20px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #resetButton:hover {
+      background-color: #d32f2f;
+    }
+ 
+
+
+
+
+</style>
+</head>
+<body>
+<!-- !headstarts -------------------------------------------------------------------------------------->
+    <header style="width: 100%;background-color: rgb(244,246,255);">
+            <nav style="width: 95%;position: -webkit-sticky;z-index: 99999;display: flex;justify-content: space-evenly;">
+                <div class="nav_logo" style="width: 100%; display: flex;justify-content: space-between;">
+                    <div style="width: 10%;">
+                        <a href="/index.html">
+                    <img style="width: 70%;" src="/images/logo.png" alt="error">
+                </a>
+                   </div>
+               
+                <div class="nav_logo-button" style="width: 30%;" >
+                    <button class="login" ><a href="/login.html"style="text-decoration:none">Login</a></button>
+                    <button class="Apply_Now" ><a href="/registrition.html"style="text-decoration:none">Apply Now</a></button>
+                </div>
+            </div>
+            </nav>
+
+
+
+    </header>
+<!-- !headEnds ---------------------------------------------------------------------------------------->
+<!-- !currencyconversion--------------------------------- -->
+<div style="display: flex;flex-direction: column;background-image:linear-gradient(to right,rgb(30,64,236),rgb(121,143,255)) ;width: 90%;margin: auto; border-radius: 30px;margin-top: 30px; padding-bottom: 20px;">
+    
+    <h1 style="color: rgb(232, 224, 224);text-align: center;margin-top: 30px;"><i> Currency Converter</i></h1>
+   <div id="a">
+    <span>Amount:-</span>
+
+  <input type="number"placeholder="amount" id="input">
+  </div>
+  <div id="rate">
+  <span> From:-</span>
+  <select name="from currency" id="fromCurrency">
+    <option value="NGN">Nigerian Naira</option>
+    <option value="USD">United States Dollar </option>
+    <option value="INR">Indian Rupee</option>
+    <option value="AED">United Arab Emirates Dirham</option>
+    <option value="JPY">Japanese Yen</option>
+    <option value="ALL">Albanian Lek</option>
+    <option value="AMD">Armenian Dram</option>
+    <option value="EUR">European Union countries </option>
+    <option value="CHF">Swiss Franc</option>
+    <option value="RUB">Russian Ruble</option>
+    
+  
+  </select>
+ 
+  <span>  To :-</span>
+  <select name=" to currency" id="toCurrency">
+    <option value="NGN">Nigerian Naira</option>
+    <option value="USD">United States Dollar </option>
+    <option value="INR">Indian Rupee</option>
+    <option value="AED">United Arab Emirates Dirham</option>
+    <option value="JPY">Japanese Yen</option>
+    <option value="ALL">Albanian Lek</option>
+    <option value="AMD">Armenian Dram</option>
+    <option value="EUR">European Union countries </option>
+    <option value="CHF">Swiss Franc</option>
+    <option value="RUB">Russian Ruble</option>
+  
+  </select>
+</div>
+ <div id="bt">
+  <button id ="button">convert</button>
+  <button id="resetButton">Reset</button>
+</div>
+  <div  id="amount" >
+    <h2><i>Converted Amount :-</i></h2><span id="container"></span>
+
+  </div>
+
+ 
+   
+
+</div>
+<div class="body_1" style="display: flex;background-image: linear-gradient(to right,rgb(30,64,236),rgb(121,143,255)); width: 84%;margin: auto;margin-top: 40px;border-radius: 30px;justify-content: center;padding: 30px;">
+    <div class="image_div" style="width: 30%;display: flex;">
+        <img style="width: 100%;margin: auto;" src="https://image.typedream.com/cdn-cgi/image/width=640,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/2Ehuu2LgMPKSOMXYIoyiUFbHWQo__Mockup_iPhone_11_3_.png?bucket=document" alt="">
+    </div>
+    <div class="data" style="display: flex;flex-direction: column;justify-content: space-evenly;width: 30%;padding-left: 10%;">
+        <div class="Heading-1">
+            <h1 style="color: aliceblue;font-size: 200%;">
+                The Next Big Thing Is Here
+            </h1>
+        </div>
+        <div class="heading-2">
+            <h6 style="font-size: 120%;color: white;">
+                With PayWise you can track your Payment and Transaction at your FingerTip
+            </h6>
+        </div>
+        <div class="applyNow">
+            <button style="background-color: aliceblue;color: rgb(30,64,236);padding: 10px;border-radius: 20px;border: none;"><a href="/registrition.html" style="text-decoration: none;border: none;">Apply Now</a></button>
+        </div>
+        
+    </div>
+</div>
+
+<h1 style="font-size: 2em;text-align:center ;margin-top: 50px;">Convenient
+    Transactions <br>Ahead</h1>
+
+<h3 style="font-size: 1em;text-align: center;margin-top: 40px;">
+    Pay anything easily and safely with the touch of a finger to complete financial <br>
+solutions to meet your financial needs and change how we manage finance fairly, <br>
+transparently, and friendly.
+</h3>
+
+<div class="cards_details" style="display: flex;width: 85%;margin: auto;justify-content: space-between;margin-top: 40px;">
+    <a href="#" style="width: 25%;padding: 20px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;text-decoration: none;"><div class="details" >
+        <h1>Instant Fee <br>Transaction and <br>Free Payment</h1>
+        <h4>Pay with zero charges and see the paymemt completed instantly</h4>
+        <img src="https://image.typedream.com/cdn-cgi/image/width=256,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/2EhNDGoCRNYRdIPPXXSadUtrmNV_X_-_5.png?bucket=document" alt="error">
+    </div></a>
+    <a href="#" style="width: 25%;padding: 20px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;text-decoration: none;">
+        <div class="details" >
+            <h1>Instant Fee <br>Transaction and <br>Free Payment</h1>
+            <h4>Pay with zero charges and see the paymemt completed instantly</h4>
+            <img src="https://image.typedream.com/cdn-cgi/image/width=256,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/2EhNlSshEEvzrUNvK9hBsVRMqpj_X_-_6.png?bucket=document" alt="error">
+        </div>
+    </a>
+    <a href="#" style="width: 25%;padding: 20px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;text-decoration: none;">
+        <div class="details" >
+            <h1>Instant Fee <br>Transaction and <br>Free Payment</h1>
+            <h4>Pay with zero charges and see the paymemt completed instantly</h4>
+            <img src="https://image.typedream.com/cdn-cgi/image/width=256,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/2EhOFmtXyRlifY399M7PJg9xnGQ_Mockup.png?bucket=document" alt="error">
+        </div>
+    </a>
+</div>
+
+<div class="appBenifits" style="width: 90%;margin: auto; justify-content: center;margin-top: 40px;">
+
+<div class="Phoneimg" style="width: 30%;display: flex;justify-content: center;">
+    <img style="width: 100%;" src="https://image.typedream.com/cdn-cgi/image/width=750,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/2EhVHVXJ7QNLme9DL5RmxtB8cDk_Frame_41_3_.png?bucket=document" alt="error">
+</div>
+<div class="phoneImgDetail" style="width: 50%;padding: 30px;">
+    <h1>
+        One app, <br>
+        Many Benifits
+    </h1>
+    <h4 style="color: rgb(177,172,165);">
+        Manage everything directly and easily with Bloop. Set your
+payment list, send money to your friends, etc.
+    </h4>
+
+    <div class="startApply">
+        <button style="background-image: linear-gradient(to right, rgb(30,64,236) , rgb(121,143,255));font-size: larger;border-radius: 20px;padding: 10px;">
+            <a href="/registrition.html" style="color: white;">Start For Free -></a>
+        </button>
+    </div>
+</div>
+
+</div>
+
+<div class="reviews" style="display: flex; justify-content: center;">
+    <h1>What People said about</h1>
+</div>
+<div class="actual reviews" style="display: flex;">
+   
+</div>
+<!-- !footstarts ------------------------------------------------------------------------------------------>
+    <footer style="background-color: black;display: flex;padding: 20px;">
+        <div class="footerData1" style="display: flex;flex-direction: column;background-color: white;border-radius: 20px;">
+        <img src="/images/logo.png" alt="erroe">
+            <h2>Copyright © 2022 Pre Inc. All rights reserved.</h2>
+        </div>
+        <div class="footerData" style="display: flex;flex-direction: column;color: white;">
+            <h2>Company</h2>
+            <h5>About</h5>
+            <h5>Carrers</h5>
+            <h5>Services</h5>
+            <h5>Join Us</h5>
+            <!-- <h5></h5> -->
+        </div>
+        <div class="footerData" style="display: flex;flex-direction: column;color: white;">
+            <h2>Legal</h2>
+            <h5>Term of <br>Service</h5>
+            <h5>Privacy Policy</h5>
+            <h5>Abuse</h5>
+            <!-- <h5>Legal</h5>
+            <h5>Legal</h5> -->
+        </div>
+        <div class="footerData" style="display: flex;flex-direction: column;color: white;">
+            <h2>Resources</h2>
+            <h5>Pricing</h5>
+            <h5>Articles</h5>
+            <h5>Guide</h5>
+            <h5>Terms and Condition</h5>
+            <h5>Resources</h5>
+        </div>
+        <div class="footerData" style="display: flex;flex-direction: column;color: white;">
+            <h2>Contact Us</h2>
+            <h5>Twitter</h5>
+            <h5>LinkedIn</h5>
+            <h5>Instagram</h5>
+            <h5>Youtube</h5>
+            <h5>Email</h5>
+        </div>
+
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+    let amount=document.getElementById("input")
+    let fromCurrency=document.getElementById("fromCurrency") 
+    let toCurrency=document.getElementById("toCurrency")
+    const resetButton = document.getElementById("resetButton");
+    
+    
+    function fetchdata(amount,fromCurrency,toCurrency){
+      fetch(`https://64889f370e2469c038fe1ba1.mockapi.io/users/${fromCurrency}`)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+            console.log(data)
+          //console.log(data.conversion_rates)
+          data1=data.conversion_rates
+          console.log(data)
+          currencyExchange(amount,toCurrency,fromCurrency)
+          
+        })
+        .catch(error=>console.log("error")) 
+        
+       
+    }
+    let container=document.getElementById("container")
+     function currencyExchange(amount,toCurrency ,fromCurrency){
+     
+      container.innerHTML=""
+      let a=amount* data1[toCurrency]
+     
+      container.innerText=a
+    
+      
+    }
+    let amount1=document.getElementById("amount")
+     let button=document.getElementById("button")
+     button.addEventListener("click",(e)=>{
+        e.preventDefault()
+      let a=amount.value
+     let b=fromCurrency.value
+      let c=toCurrency.value
+       fetchdata(a,b,c)
+      amount1.style.display="block"
+    })
+    function resetFields() {
+      amount.value = "";
+      fromCurrency.value = "NGN";
+      toCurrency.value = "NGN";
+      container.innerText = "";
+    }
+    resetButton.addEventListener("click",()=>{ 
+        resetFields()
+        amount1.style.display="none"
+    });
+    
+    
+    //ans(data,toCurrency,amount)
+    
+    
+    
+    
+</script>
+</html>
