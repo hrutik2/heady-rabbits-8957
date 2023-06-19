@@ -19,19 +19,18 @@ using their Naira account by offering a convenient payment option.
 ## Features
 
 <ul>
-<li>Lorem</li>
-<li>Lorem</li>
-<li>Lorem</li>
-<li>Lorem</li>
+<li>Login</li>
+<li>Apply Now</li>
+<li>urrency Conversion</li>
+<li>Virtual Card</li>
 </ul>
 
 ## Technologies Used
 
 <ul>
-<li>Lorem</li>
-<li>Lorem</li>
-<li>Lorem</li>
-<li>Lorem</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
 </ul>
 
 ## Screenshots
